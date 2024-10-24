@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy the pom.xml and download dependencies
 COPY pom.xml .
 
-# Download Maven dependencies (this will be cached if the pom.xml doesn't change)
+# Download Maven dependencies
 RUN mvn dependency:go-offline -B
 
 # Copy the source code to the Docker image
